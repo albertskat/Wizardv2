@@ -2,49 +2,103 @@
 <html>
 <head>
   <title>Wizard v2</title>
-  <link href="/normalize.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://use.fontawesome.com/b29bba6801.js"></script> <!-- old font awesome script -->
+
+<!--- FONTS --->
+<!--- FONTS --->
+<!--- FONTS --->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900" rel="stylesheet">
+  <script src="https://use.fontawesome.com/b29bba6801.js"></script>
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900" rel="stylesheet">
+
+<!--- STYLESHEETS --->
+<!--- STYLESHEETS --->
+<!--- STYLESHEETS --->
+  <link href="./css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/basic.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+<!--- SCRIPTS --->
+<!--- SCRIPTS --->
+<!--- SCRIPTS --->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/jquery.simplemodal.js"></script>
+  <script src="./js/basic.js"></script>
+  <script src="./js/my.js"></script>
+
+<!--
+  <title>Wizard v2</title>
+  <link href="/normalize.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/b29bba6801.js"></script>
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900" rel="stylesheet"> -->
+
 
   <!-- Load jQuery, SimpleModal, Basic JS files, and Basic CSS file -->
-<script src="./js/jquery.js"></script>
+<!-- <script src="./js/jquery.js"></script>
 <script src="./js/jquery.simplemodal.js"></script>
 <script src="./js/basic.js"></script>
 <script src="./js/my.js"></script>
 <link rel="stylesheet" href="./css/basic.css">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/style.css"> -->
 
 
 </head>
 
 <body>
-<h2>Choose your number of cards:</h2>
-1 card: &nbsp;<input type="radio" name="userAnswerChoice" value="&lt;div class=&quot;toolbar&quot;&gt; &lt;a href=&quot;&quot;&gt;&lt;span class=&quot;fa fa-home fa-3x&quot;&gt;<br>
+<div class="jumbotron text-center">
+<!--- STEP ZERO --->
+<!--- STEP ZERO --->
+<!--- STEP ZERO --->
+<h2>Step 0: Prepare</h2>
+</div>
+
+<div class="center">
+<em>Instructions: Create a new file in your html editor - Brackets, Atom, etc. Save it and name it with a ".html" ending. Ex) TunaversePOA.html</em><br><br>
+</div>
+
+<!--- STEP ONE --->
+<!--- STEP ONE --->
+<!--- STEP ONE --->
+<div class="jumbotron text-center">
+<h2>Step 1: Choose your number of cards</h2>
+</div>
+
+<div class="center">
+<em>Instructions: After copying the text, paste into your file. On each card:<br>
+* change the title in TWO locations<br>
+* add or delete the description<br>
+* replace "fa-file" with the Font Awesome icon you want for the front of each card (click for cheatsheet)
+</ol></em><br><br>
+
+
+&nbsp;<input type="radio" name="userAnswerChoice" value="&lt;div class=&quot;hemisphere&quot;&gt; &lt;div class=&quot;toolbar&quot;&gt; &lt;a href=&quot;&quot;&gt;&lt;span class=&quot;fa fa-home fa-3x&quot;&gt;<br>
 &lt;/span&gt;&lt;/a&gt; &lt;/div&gt; &lt;ul class=&quot;cardgroupselect&quot;&gt; &lt;!-- CARD 1 --&gt; &lt;li class=&quot;card-1 original&quot;&gt;<br>
 &lt;div class=&quot;vertical-text&quot;&gt;&lt;p class=&quot;side-title&quot;&gt; Card 1 Title Here &lt;/p&gt;&lt;/div&gt; &lt;div class=&quot;horizontal-title&quot;&gt;&lt;/div&gt;<br>
 &lt;div class=&quot;visible collapsed&quot;&gt; &lt;h1&gt; Card 1 Title Here &lt;br&gt;&lt;br&gt;&lt;/h1&gt; &lt;span class=&quot;fa fa-file fa-5x img-circle&quot;&gt;&lt;/span&gt;<br>
 &lt;div class=&quot;description&quot;&gt; &lt;div class=&quot;optiona&quot;&gt;&lt;p&gt; Card 1 Description Here &lt;/p&gt;&lt;/div&gt; &lt;div class=&quot;optionb&quot;&gt;&lt;p&gt;<br>
 &lt;/p&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;hidden expanded&quot;&gt; &lt;div class=&quot;optiona&quot;&gt; &lt;!-- INSERT YOUR CARD 1 LAYOUT HERE --&gt; &lt;/div&gt;<br>
-&lt;div class=&quot;optionb&quot;&gt; &lt;div class=&quot;layout1&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;"/><br>
+&lt;div class=&quot;optionb&quot;&gt; &lt;div class=&quot;layout1&quot;&gt; &lt;/div&gt;&lt;/div&gt;&lt;/div&gt; &lt;/li&gt; &lt;/ul&gt;&lt;/div&gt;"/>1 card
 
 
-2 cards: <input type="radio" name="userAnswerChoice" value="Two"/><br>
-3 cards: <input type="radio" name="userAnswerChoice" value="Three"/><br>
-4 cards: <input type="radio" name="userAnswerChoice" value="Four"/><br>
-5 cards: <input type="radio" name="userAnswerChoice" value="Five"/><br>
-6 cards: <input type="radio" name="userAnswerChoice" value="Six"/><br>
+<input type="radio" name="userAnswerChoice" value="Two"/>2 cards
+<input type="radio" name="userAnswerChoice" value="Three"/>3 cards
+<input type="radio" name="userAnswerChoice" value="Four"/>4 cards
+<input type="radio" name="userAnswerChoice" value="Five"/>5 cards
+<input type="radio" name="userAnswerChoice" value="Six"/>6 cards
 
-<p><span>Copy this text: </span><br>
-<input type="text" id="copyThis"/></p>
+<br><br><input type="text" id="step1"/></p>
 
 <script type="text/javascript">
 function handleUserAnswer(e){
     var el = e.target || e.srcElement;
-    document.getElementById('copyThis').value = el.value;
+    document.getElementById('step1').value = el.value;
 }
 var radios = document.getElementsByTagName('input');
 for(var i = 0; i<radios.length; i++){
@@ -60,6 +114,221 @@ for(var i = 0; i<radios.length; i++){
     }
 }
 </script>
+
+<button onclick="myFunction()">Copy text</button><br><br>
+
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("step1");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  // /* Alert the copied text */
+  // alert("Copied the text: " + copyText.value);
+
+  /* Alert the copied text */
+  alert("Text copied!");
+}
+</script>
+</div>
+
+<!--- STEP TWO --->
+<!--- STEP TWO --->
+<!--- STEP TWO --->
+<div class="jumbotron text-center">
+<h2>Step 2: Choose Your Layout(s)</h2>
+</div>
+
+<div class="center">
+<em>Instructions: Choose a layout for each card. After copying the text, paste into your file in the proper locations.</em><br>
+<a href="">Click to see all layout choices</a><br><br>
+
+<input type="radio" name="userAnswerChoice" value="Two"/>Layout 1a
+<input type="radio" name="userAnswerChoice" value="Three"/>Layout 1b
+<input type="radio" name="userAnswerChoice" value="Four"/>Layout 2a
+<input type="radio" name="userAnswerChoice" value="Five"/>Layout 2b
+<input type="radio" name="userAnswerChoice" value="Six"/>Layout 3a
+<input type="radio" name="userAnswerChoice" value="Six"/>Layout 3b
+<input type="radio" name="userAnswerChoice" value="Six"/>Layout 4a
+<input type="radio" name="userAnswerChoice" value="Six"/>Layout 4b
+
+
+<br><br><input type="text" id="step2"/></p>
+
+<script type="text/javascript">
+function handleUserAnswer(e){
+    var el = e.target || e.srcElement;
+    document.getElementById('step2').value = el.value;
+}
+var radios = document.getElementsByTagName('input');
+for(var i = 0; i<radios.length; i++){
+    var r = radios[i];
+    if(r.getAttribute('name') == 'userAnswerChoice'){
+        if(r.addEventListener){
+            r.addEventListener('change',handleUserAnswer);
+        }else if(r.attachEvent){
+            r.attachEvent('onchange',handleUserAnswer);
+        }else{
+            r.onChange = handleUserAnswer;
+        }
+    }
+}
+</script>
+
+<button onclick="myFunction()">Copy text</button><br><br>
+
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("step2");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  // /* Alert the copied text */
+  // alert("Copied the text: " + copyText.value);
+
+  /* Alert the copied text */
+  alert("Text copied!");
+}
+</script>
+</div>
+
+
+<!--- STEP THREE --->
+<!--- STEP THREE --->
+<!--- STEP THREE --->
+<div class="jumbotron text-center">
+<h2>Step 3: Add Your Content</h2>
+</div>
+
+<div class="center">
+<em>Instructions: After copying the text, paste into your file in the proper locations. Edit the code to include the proper text or image/gif.</em><br><br>
+
+<input type="radio" name="userAnswerChoice" value="Two"/>Bulleted List
+<input type="radio" name="userAnswerChoice" value="Three"/>Numbered List
+<input type="radio" name="userAnswerChoice" value="Four"/>Multi-Level List (Bulleted)
+<input type="radio" name="userAnswerChoice" value="Five"/>Large Icon List
+<input type="radio" name="userAnswerChoice" value="Six"/>Small Icon List
+<input type="radio" name="userAnswerChoice" value="Six"/>Image or GIF
+
+
+<br><br><input type="text" id="step3"/></p>
+
+<script type="text/javascript">
+function handleUserAnswer(e){
+    var el = e.target || e.srcElement;
+    document.getElementById('step2').value = el.value;
+}
+var radios = document.getElementsByTagName('input');
+for(var i = 0; i<radios.length; i++){
+    var r = radios[i];
+    if(r.getAttribute('name') == 'userAnswerChoice'){
+        if(r.addEventListener){
+            r.addEventListener('change',handleUserAnswer);
+        }else if(r.attachEvent){
+            r.attachEvent('onchange',handleUserAnswer);
+        }else{
+            r.onChange = handleUserAnswer;
+        }
+    }
+}
+</script>
+
+<button onclick="myFunction()">Copy text</button><br><br>
+
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("step3");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  // /* Alert the copied text */
+  // alert("Copied the text: " + copyText.value);
+
+  /* Alert the copied text */
+  alert("Text copied!");
+}
+</script>
+</div>
+
+
+
+<!--- STEP FOUR --->
+<!--- STEP FOUR --->
+<!--- STEP FOUR --->
+<div class="jumbotron text-center">
+<h2>Step 4: Extra Formatting</h2>
+</div>
+
+<div class="center">
+<em>Instructions: After copying the text, paste into your file in the proper locations.</em><br><br>
+
+<input type="radio" name="userAnswerChoice" value="Two"/>Bold font
+<input type="radio" name="userAnswerChoice" value="Three"/>SPS Blue font
+<input type="radio" name="userAnswerChoice" value="Four"/>Color of icon
+<input type="radio" name="userAnswerChoice" value="Five"/>Add a line break
+<input type="radio" name="userAnswerChoice" value="Six"/>Underline
+<input type="radio" name="userAnswerChoice" value="Six"/>Exclamation (!!!) icon
+<input type="radio" name="userAnswerChoice" value="Six"/>Lightbulb icon
+
+
+<br><br><input type="text" id="step3"/></p>
+
+<script type="text/javascript">
+function handleUserAnswer(e){
+    var el = e.target || e.srcElement;
+    document.getElementById('step4').value = el.value;
+}
+var radios = document.getElementsByTagName('input');
+for(var i = 0; i<radios.length; i++){
+    var r = radios[i];
+    if(r.getAttribute('name') == 'userAnswerChoice'){
+        if(r.addEventListener){
+            r.addEventListener('change',handleUserAnswer);
+        }else if(r.attachEvent){
+            r.attachEvent('onchange',handleUserAnswer);
+        }else{
+            r.onChange = handleUserAnswer;
+        }
+    }
+}
+</script>
+
+<button onclick="myFunction()">Copy text</button><br><br>
+
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("step4");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  // /* Alert the copied text */
+  // alert("Copied the text: " + copyText.value);
+
+  /* Alert the copied text */
+  alert("Text copied!");
+}
+</script>
+</div>
 
 </body>
 </html>
