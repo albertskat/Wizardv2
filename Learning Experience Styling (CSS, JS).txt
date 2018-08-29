@@ -1,0 +1,686 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/spscops/trainingcenter/styles/CourseCoverStyle.css"> 
+<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/spscops/trainingcenter/styles/ActivityStyle_v2.css"> 
+<!-- <link rel="stylesheet" href="https://s3.amazonaws.com/spscops/trainingcenter/templates/style.css"> --> 
+<script src="https://s3.amazonaws.com/spscops/trainingcenter/templates/my.js"></script>
+<style>
+  /* All styles have been moved to individual style sheets */
+  
+  /* Virtual Events button style */
+.learning-header__sidebar-toggle:hover {
+  background: #00AAE5 !important;
+}
+.uk-button.uk-button-default {
+  background: #606A6E;
+  color: #fff;
+}
+.uk-button.uk-button-default:hover {
+  color: #F6F6F6 !important;
+  background: #1F282C !important;
+}
+.uk-button.uk-button-default[type="submit"], .uk-button.uk-button-default:focus {
+  color: #fff;
+}
+.cover-virtual-event > .uk-float-right > .uk-button.uk-button-outline:hover {
+  background: #F6F6F6 !important;
+}
+.uk-width-3-10.uk-text-right > .uk-button.uk-button-outline:hover {
+  background: #F6F6F6 !important;
+}
+.uk-button.uk-button-outline.uk-border-left.completion-button:hover {
+  background: #4B2346 !important;
+}
+.footer-navigation {pointer-events: none;}
+.footer-navigation__previous {pointer-events: auto;}
+.completion-button {pointer-events: auto;}
+  
+  /* AWS CSS STYLES */ 
+
+  .secondary>li{
+  margin-left:80px;
+}
+
+.hide{
+  visibility: hidden;
+}
+
+/* .original used for keeping the a) card li and b) bulleted/numbered list li separated
+.. and perhaps something else I'm forgetting about? */
+
+.original{
+  overflow: hidden;
+}
+
+/* ------ Icon Section (Font Awesome)------ */
+
+.icon::before {
+    display: inline-block;
+    margin: .1em;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.fa-3x {
+  font-size: 3em; /* the size of the icons */
+}
+.icon-float{
+  float: left;
+}
+.fa-exclamation-triangle{
+  color: #ff3246;
+}
+.fa-exclamation-circle{
+  color: #ff3246;
+}
+.orangestar{
+  color: #ff9632;
+}
+.fa-lightbulb{
+  color: #ff9632;
+}
+.sps-purple{
+color: #883673;
+}
+.sps-blue{
+color: #00aae5;
+}
+.sps-green{
+color: #32be6f;
+}
+.sps-orange{
+color: #ff9632;
+}
+.sps-yellow{
+color: #fff0b3;
+}
+.center{
+text-align: center;
+}
+
+/* ------ Layout Section ------ */
+
+/*---- CSS GRID ---- // not currently using this for any layout but thought I'd keep it in the css */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 20px 80% 20px;
+  grid-template-rows: 200px;
+  justify-content: center;
+}
+
+
+/*---- 5 total available layouts include: layout1, layout2a, layout2b, layout3a, and layout3b ---- */
+
+/*---- LAYOUT 1 ---- */
+.text1 { grid-area: text1;}
+
+.layout1 {
+display: grid;
+grid-template:
+'text1';
+grid-gap: 50px;
+background-color: #fff;
+margin: 0px 45px 0px 45px;
+}
+
+.layout1>div {
+background-color: #fff;
+opacity: ;
+text-align: left;
+padding: 0px 50px;
+font: 25px/1.5 Source Sans Pro, Arial, Helvetica, sans-serif;
+border-radius: 10px;
+}
+
+/*---- LAYOUT 2a ---- */
+.layout2a .text1 { grid-area: text1;}
+.layout2a .image1 { grid-area: image1;}
+
+.layout2a {
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto;
+grid-template-areas:
+'text1'
+'image1';
+grid-gap: 50px;
+background-color: #fff;
+margin: 0px 45px 0px 45px;
+}
+
+.layout2a>div {
+background-color: #fff;
+opacity: ;
+text-align: left;
+padding: 0px 50px;
+font: 25px/1.5 Source Sans Pro, Arial, Helvetica, sans-serif;
+border-radius: 10px;
+}
+
+.layout2a .image1 img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+/* width: 800px;
+height: 300px; */
+}
+
+/*---- LAYOUT 2b ---- */
+.layout2b .text1 { grid-area: text1;}
+.layout2b .image1 { grid-area: image1;}
+.layout2b .text2 { grid-area: text2;}
+.layout2b .image2 { grid-area: image2;}
+
+.layout2b {
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto;
+grid-template-areas:
+'text1'
+'image1'
+'text2'
+'image2';
+grid-gap: 50px;
+background-color: #fff;
+margin: 0px 45px 0px 45px;
+}
+
+.layout2b>div {
+background-color: #fff;
+opacity: ;
+text-align: left;
+padding: 0px 50px;
+font: 25px/1.5 Source Sans Pro, Arial, Helvetica, sans-serif;
+border-radius: 10px;
+}
+
+.layout2b .image1 .image2 img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+/* width: 800px;
+height: 300px; */
+}
+
+/*---- LAYOUT 3a ---- */
+.layout3a .text1 { grid-area: text1;}
+.layout3a .image1 { grid-area: image1;}
+
+.layout3a {
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto;
+grid-template-areas:
+'text1 image1'
+'text2 image2';
+grid-gap: 50px;
+background-color: #fff;
+margin: 0px 45px 0px 45px;
+}
+
+.layout3a>div {
+background-color: #fff;
+opacity: ;
+text-align: left;
+padding: 0px 50px;
+font: 25px/1.5 Source Sans Pro, Arial, Helvetica, sans-serif;
+border-radius: 10px;
+}
+
+.layout3a .image1 img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+/* width: 800px;
+height: 300px; */
+}
+
+/*---- LAYOUT 3b ---- */
+.layout3b .text1 { grid-area: text1;}
+.layout3b .image1 { grid-area: image1;}
+.layout3b .text2 { grid-area: text2;}
+.layout3b .image2 { grid-area: image2;}
+
+.layout3b {
+display: grid;
+grid-template-columns: auto;
+grid-template-rows: auto;
+grid-template-areas:
+'text1 image1'
+'text2 image2';
+grid-gap: 50px;
+background-color: #fff;
+margin: 0px 45px 0px 45px;
+}
+
+.layout3b>div {
+background-color: #fff;
+opacity: ;
+text-align: left;
+padding: 0px 50px;
+font: 25px/1.5 Source Sans Pro, Arial, Helvetica, sans-serif;
+border-radius: 10px;
+}
+
+.layout3b .image1 img{
+display: block;
+margin-left: auto;
+margin-right: auto;
+/* width: 800px;
+height: 300px; */
+}
+
+
+/* ------ Global Section ------ */
+
+body{
+  padding:0;
+  margin:0;
+  background-image: url(../img/background.jpg);
+  background-color: #ffffff;
+  overflow: hidden; /* can also hide only x or y axis if necessary */
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* unvisited link */
+.hemisphere > a.homebutton:link {
+    color: #ccc;
+}
+
+/* visited link */
+.hemisphere > a.homebutton:visited {
+    color: #ccc;
+}
+
+/* mouse over link */
+.hemisphere > a.homebutton:hover {
+    color: #33b5e5;
+}
+
+/* selected link */
+.hemisphere > a.homebutton:active {
+    color: #ccc;
+}
+
+/* the toolbar: home, print, toggle button */
+
+.toolbar{
+  position: relative;
+  top: 0px;
+  left: 30px;
+  height: 50px;
+  display: block;
+  width: auto;
+}
+
+.toolbar>h1{
+  font-family:cursive;
+  font-size:45px; /* when changing font size, also have to move position or toggle.. .. because of inline display? */
+  font-weight: 700;
+  display: inline;
+  color: #0180aa;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+
+
+/* the toggle button */
+.optiona{
+  display:block;
+}
+.optionb{
+  display:none;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  top: 10px; /*moves the whole toggle button up or down*/
+  width: 60px;
+  height: 34px;
+  z-index: 1; /*puts the button on top of other layers i.e. cards*/
+  margin: 0 6px; /*the amount of space on the left or right of toggle button*/
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #33b5e5;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #33b5e5;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ------ Card Section ------ */
+
+
+
+/* Collapsed Card Shape and Layout */
+
+[class*="card-"] {
+    float: left;
+    /* padding: 6px;  */
+    /* padding: 0; */
+    text-align: center;
+    box-sizing: border-box;
+    margin: 5px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    display:inline;
+    background-color: #ffffff;
+    border: #9B4B87 3px solid;
+    color: #1F282C; /* font color on collapsed AND expanded cards */
+    height: 70vh;
+    transition: 1s all;
+}
+.card-1{
+  width:90%
+}
+.card-2{
+  width:48%
+}
+.card-3{
+  width:31%;
+}
+.card-4{
+  width: 24%;
+}
+
+.card4group{
+/* width: auto; */
+}
+
+
+.hidden {
+       display: none;
+  }
+.visible {
+       display: block;
+  }
+.visible.collapsed {
+    overflow-y: hidden;
+}
+
+li.original{
+  cursor:pointer;
+}
+
+.vertical-text{
+  position: relative;
+  left: 0px;
+  top: 350px; /*how to center responsively?*/
+  -webkit-transform: rotate(-90deg); /*safari*/
+  -moz-transform: rotate(-90deg); /*firefox*/
+  -ms-transform: rotate(-90deg); /*ie*/
+  -o-transform: rotate(-90deg); /*opera*/
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /*internet explorer*/
+  justify-content: flex-start;
+  width:50px;
+  height:50px;
+}
+
+.side-title{
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  height: 250px;
+  margin: 0;
+  width: 250px;
+  color: #FFFFFF;
+}
+.horizontal-title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:48px;
+  font-weight: 900;
+  line-height: 48px !important;   
+}
+.active div.vertical-text p.side-title{
+    color: #9B4B87;
+}
+.nonActive div.vertical-text p.side-title{
+    color: #9B4B87;
+}
+
+
+.hemisphere > li:first-child{
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+}
+
+.hemisphere > li:last-child{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius:10px;
+}
+
+
+/* Collapsed Card Text and Image */
+
+
+.collapsed>h1{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:48px;
+  font-weight: 900;
+  padding: 50px 0 0 0; 
+}
+  .collapsed>h2{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size:38px;
+  font-weight: 900;
+  padding: 50px 0 0 0;
+    line-height: 40px; 
+}
+div.visible.collapsed h1, h2{
+    color: #9B4B87;
+}
+
+.description{
+  width: auto;
+  padding: 50px 50px 500px 50px;
+  color: #FFFFFF;
+  background-color: #9B4B87;
+  min-height: 200px;
+}
+  
+.description p{
+  font: 32px/1.5 Source Sans Pro, Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+  
+li.original > .vertical-text {
+    display: none;
+}
+li.original.nonActive > .vertical-text {
+    display: block;
+}
+li.original.nonActive:hover {
+    background-color: #9B4B87;
+}
+
+
+.img-circle{
+  border-radius: 50%;
+  border: #9B4B87 10px solid;
+  padding: 20px 0px 0px 0px;
+  margin-bottom: 10%;
+  width:150px;
+  height:115px;
+  color: #9B4B87;
+}
+
+li[class^="card-"]:hover .img-circle{
+  border-radius: 50%;
+  border: #9B4B87 10px solid;
+  padding: 20px 0px 0px 0px;
+  margin-bottom: 10%;
+  width:150px;
+  height:115px;
+  color: #f2f2f2;
+  background-color: #9B4B87;
+}
+
+.img-workflow{
+  width: 220px;
+  height: 450px;
+
+}
+
+/* working with javascript */
+
+.active{
+  width: 90%;
+  border-top-left-radius:0;
+  border-top-right-radius:0;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+  opacity: 1.0;
+  overflow: auto;
+}
+
+.nonActive{
+  width: 2%;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+
+li.active:first-child{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+li.active:last-child{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+li.nonActive:first-child{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+li.nonActive:last-child{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+li.nonActive:nth-last-child(2){
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+li.nonActive:nth-child(2){
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+  /* END OF AWS CSS STYLES */
+  
+  
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+Activities.RichTextView.reopen({
+    didInsertElement: function () {
+$('li').mouseenter(function(){
+        console.log("mouse enter nonActive");
+        $(this).find("p.side-title").css("color","#FFFFFF");
+});
+$('li').mouseleave(function(){
+        $(this).find("p.side-title").css("color","#9B4B87");
+});
+$('ul.cardgroupselect li.original').on("click", function(){
+    $(this).addClass("active").removeClass("nonActive original");
+   var current_active_title = $(this).find(".side-title").text();
+    $(this).find(".horizontal-title").text(current_active_title);
+    $(this).find(".horizontal-title").css("display","block");
+    $(this).find(".side-title").css("display","none");
+    $(this).siblings().find(".side-title").css("display","block");
+    $(this).siblings().find(".horizontal-title").css("display","none");
+    $(this).siblings().addClass("nonActive original").removeClass("active");
+    $("div.collapsed").removeClass("visible").addClass("hidden");
+    $("div.expanded").removeClass("hidden").addClass("visible");
+});
+$('#switch').click(function(){
+        console.log('toggle click');
+         if ($('.optiona').css('display') == 'block') {
+             $('.optiona').css('display','none');
+             $('.optionb').css('display','block');
+         }
+        else {
+            $('.optiona').css('display','block');
+            $('.optionb').css('display','none');
+        }
+    });
+      
+  }
+  }); 
+      });
+</script> 
+
+
+
