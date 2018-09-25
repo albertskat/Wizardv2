@@ -2,13 +2,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/spscops/trainingcenter/styles/CourseCoverStyle.css"> 
-<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/spscops/trainingcenter/styles/ActivityStyle_v2.css"> 
-<!-- <link rel="stylesheet" href="https://s3.amazonaws.com/spscops/trainingcenter/templates/style.css"> --> 
+<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/spscops/trainingcenter/styles/CourseCoverStyle.css">
+<link rel="stylesheet" type="text/css" href="https://s3.amazonaws.com/spscops/trainingcenter/styles/ActivityStyle_v2.css">
+<!-- <link rel="stylesheet" href="https://s3.amazonaws.com/spscops/trainingcenter/templates/style.css"> -->
 <script src="https://s3.amazonaws.com/spscops/trainingcenter/templates/my.js"></script>
 <style>
   /* All styles have been moved to individual style sheets */
-  
+
   /* Virtual Events button style */
 .learning-header__sidebar-toggle:hover {
   background: #00AAE5 !important;
@@ -36,8 +36,8 @@
 .footer-navigation {pointer-events: none;}
 .footer-navigation__previous {pointer-events: auto;}
 .completion-button {pointer-events: auto;}
-  
-  /* AWS CSS STYLES */ 
+
+  /* AWS CSS STYLES */
 
   .secondary>li{
   margin-left:80px;
@@ -283,7 +283,7 @@ height: 300px; */
 body{
   padding:0;
   margin:0;
-  background-image: url(../img/background.jpg);
+  /* background-image: url(../img/background.jpg);
   background-color: #ffffff;
   overflow: hidden; /* can also hide only x or y axis if necessary */
   font-family: "Source Sans Pro", sans-serif;
@@ -438,6 +438,9 @@ input:checked + .slider:before {
 .card-4{
   width: 24%;
 }
+.card-5{
+  width: 18%;
+}
 
 .card4group{
 /* width: auto; */
@@ -485,7 +488,7 @@ li.original{
   font-family: 'Source Sans Pro', sans-serif;
   font-size:48px;
   font-weight: 900;
-  line-height: 48px !important;   
+  line-height: 48px !important;
 }
 .active div.vertical-text p.side-title{
     color: #9B4B87;
@@ -513,14 +516,14 @@ li.original{
   font-family: 'Source Sans Pro', sans-serif;
   font-size:48px;
   font-weight: 900;
-  padding: 50px 0 0 0; 
+  padding: 50px 0 0 0;
 }
   .collapsed>h2{
   font-family: 'Source Sans Pro', sans-serif;
   font-size:38px;
   font-weight: 900;
   padding: 50px 0 0 0;
-    line-height: 40px; 
+    line-height: 40px;
 }
 div.visible.collapsed h1, h2{
     color: #9B4B87;
@@ -533,12 +536,12 @@ div.visible.collapsed h1, h2{
   background-color: #9B4B87;
   min-height: 200px;
 }
-  
+
 .description p{
   font: 32px/1.5 Source Sans Pro, Arial, Helvetica, sans-serif;
   font-style: italic;
 }
-  
+
 li.original > .vertical-text {
     display: none;
 }
@@ -580,7 +583,7 @@ li[class^="card-"]:hover .img-circle{
 /* working with javascript */
 
 .active{
-  width: 90%;
+  width: 88%;
   border-top-left-radius:0;
   border-top-right-radius:0;
   border-bottom-left-radius:0;
@@ -638,8 +641,8 @@ li.nonActive:nth-child(2){
   border-bottom-right-radius: 0;
 }
   /* END OF AWS CSS STYLES */
-  
-  
+
+
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -676,11 +679,8 @@ $('#switch').click(function(){
             $('.optionb').css('display','none');
         }
     });
-      
+
   }
-  }); 
+  });
       });
-</script> 
-
-
-
+</script>
